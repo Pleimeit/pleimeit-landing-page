@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --purple-background: #382acc;
-  --purple-dark-background: #281e91;
-  --white: #ffffff;
-  --text-primary: #111322;
-  --lila: #f2f1fa;
-}
 @theme {
+  /* Register breakpoints */
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
+
+  /* Colors*/
   --color-purpleBackground: #382acc;
   --color-purpleDarkBackground: #281e91;
   --color-white: #ffffff;
-  --color-textPrimary: #111322;
+  --color-textBlack: #111322;
   --color-lila: #f2f1fa;
+  --color-textBlackSecundary: #111322;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,4 +29,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.menu-slide-down {
+  animation: slideDown 1s ease forwards;
 }

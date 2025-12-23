@@ -56,14 +56,12 @@ const HeaderComponent = () => {
 
   return (
     <nav className="fixed top-0 w-full bg-purpleBackground z-50">
-      {/* CONTAINER */}
       <div
         className="container mx-auto mt-2.5
     flex justify-between items-center
-    xs:h-[120px] xl:h-26.25
+    xs:h-30 xl:h-26.25
     px-6 xl:px-16"
       >
-        {/* LOGO */}
         <Link href="/" onClick={() => handleLinkClick("/")}>
           <Image
             src={isMenuOpenState ? PleimitLogoBurger : PleimitLogo}
@@ -74,7 +72,6 @@ const HeaderComponent = () => {
           />
         </Link>
 
-        {/* DESKTOP MENU */}
         <ul className="hidden xl:flex gap-40 text-[18px] font-bold">
           <li className={getNavItemClasses("/")}>
             <Link href="/" onClick={() => handleLinkClick("/")}>
@@ -93,7 +90,6 @@ const HeaderComponent = () => {
           </li>
         </ul>
 
-        {/* BURGER */}
         {!isMenuOpenState && (
           <button
             onClick={toggleMenu}
@@ -105,10 +101,8 @@ const HeaderComponent = () => {
         )}
       </div>
 
-      {/* MOBILE MENU (FULL WIDTH) */}
       {isMenuOpenState && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white p-8 z-50 menuSlideDown flex flex-col">
-          {/* HEADER */}
+        <div className="fixed top-0 left-0 w-full h-full bg-white p-8 z-50 menuSlideDown flex flex-col   menu-slide-down">
           <div className="flex justify-between items-center mb-12">
             <Link href="/" onClick={toggleMenu}>
               <Image
@@ -134,7 +128,6 @@ const HeaderComponent = () => {
             <li onClick={() => handleLinkClick("/#contact")}>Contacto</li>
           </ul>
 
-          {/* FOOTER */}
           <div className="mt-auto">
             <div className="flex gap-3 mb-6 items-center justify-center">
               <Image src={AppStore} alt="app-store" height={150} width={110} />
