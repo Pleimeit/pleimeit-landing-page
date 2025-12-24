@@ -60,7 +60,7 @@ const HeaderComponent = () => {
         className="container mx-auto mt-2.5
     flex justify-between items-center
     xs:h-30 xl:h-26.25
-    px-6 xl:px-16"
+   "
       >
         <Link href="/" onClick={() => handleLinkClick("/")}>
           <Image
@@ -72,14 +72,14 @@ const HeaderComponent = () => {
           />
         </Link>
 
-        <ul className="hidden xl:flex gap-40 text-[18px] font-bold">
+        <ul className="hidden xl:flex gap-40 text-[18px] font-raleway ">
           <li className={getNavItemClasses("/")}>
             <Link href="/" onClick={() => handleLinkClick("/")}>
               Home
             </Link>
           </li>
           <li className={getNavItemClasses("/#aboutUs")}>
-            <Link href="/#aboutUs" onClick={() => handleLinkClick("/#aboutUs")}>
+            <Link href="/#about" onClick={() => handleLinkClick("/#aboutUs")}>
               Nosotros
             </Link>
           </li>
@@ -122,9 +122,9 @@ const HeaderComponent = () => {
             </button>
           </div>
 
-          <ul className="flex flex-col gap-20 text-purpleBackground font-bold text-xl">
+          <ul className="flex font-raleway flex-col gap-20 text-purpleBackground font-bold text-xl">
             <li onClick={() => handleLinkClick("/")}>Home</li>
-            <li onClick={() => handleLinkClick("/#aboutUs")}>Nosotros</li>
+            <li onClick={() => handleLinkClick("/#about")}>Nosotros</li>
             <li onClick={() => handleLinkClick("/#contact")}>Contacto</li>
           </ul>
 

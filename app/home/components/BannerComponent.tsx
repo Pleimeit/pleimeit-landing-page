@@ -15,24 +15,24 @@ const BannerComponent = () => {
   }, []);
 
   return (
-    <section className="relative bg-purpleBackground text-white overflow-hidden pt-20">
+    <section className="relative flex bg-purpleBackground  min-h-screen text-white overflow-hidden pt-20">
       <div
         className="
       container mx-auto 
-      px-6 xl:px-16
-      py-20
+     gap-y-0  xl:gap-y-8  xl:py-20
+
       grid grid-cols-1 lg:grid-cols-2
       gap-10
       items-center
     "
       >
         <div>
-          <h1 className="text-4xl lg:text-5xl font-extrabold leading-tight mb-8">
+          <h1 className=" font-bebas  lg:text-7xl mb-8">
             JUEGA, CONOCE Y FORMA <br />
             TU COMUNIDAD DEPORTIVA
           </h1>
 
-          <p className="text-md lg:text-lg text-white/90 max-w-xl mb-8">
+          <p className="font-raleway  text-md lg:text-lg text-white/90 max-w-xl mb-8">
             PLEIMEIT UNE A JUGADORES, EQUIPOS Y ORGANIZADORES PARA CREAR
             PARTIDAS REALES CERCA DE TI. ENCUENTRA TU DEPORTE, CONFIRMA TU CUPO
             Y COMPARTE LA EXPERIENCIA CON TU COMUNIDAD.
@@ -53,7 +53,7 @@ const BannerComponent = () => {
             />
           </div>
 
-          <p className="text-md lg:text-lg tracking-wide">
+          <p className=" font-bebas   text-md lg:text-lg ">
             PRIVADA Y SEGURA · GRATIS PARA EMPEZAR
           </p>
         </div>
@@ -70,10 +70,10 @@ const BannerComponent = () => {
         </div>
       </div>
 
-      <div className="bg-[#1F2399] text-center py-4 text-sm font-semibold">
+      {/* <div className="bg-[#1F2399] text-center py-4 text-sm font-semibold">
         CONFIADO POR MILES DE JUGADORES Y COMUNIDADES DEPORTIVAS ⭐ 4.8/5 EN
         RESEÑAS REALES
-      </div>
+      </div> */}
     </section>
   );
 };
