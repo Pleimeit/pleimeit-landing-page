@@ -32,18 +32,20 @@ const BannerComponent = () => {
             <Image
               src="/images/home/AppStore.png"
               alt="App Store"
-              width={165}
-              height={45}
+              width={200}
+              height={80}
+              className="h-20 w-auto"
             />
             <Image
               src="/images/home/GooglePlay.png"
               alt="Google Play"
-              width={165}
-              height={45}
+              width={200}
+              height={80}
+              className="h-20 w-auto "
             />
           </div>
 
-          <p className="font-raleway font-bold text-sm">
+          <p className="font-bebas text-sm tracking-[0.25em] uppercase text-white  ">
             PRIVADA Y SEGURA · GRATIS PARA EMPEZAR
           </p>
         </div>
@@ -61,9 +63,29 @@ const BannerComponent = () => {
       </div>
 
       <div className="absolute mt-16 w-full">
-        <div className="font-bebas max-w-4xl text-xl flex justify-center items-center mx-auto h-17.5 bg-[#1F2399] text-white rounded-xl py-4 px-6 text-center font-semibold shadow-lg">
-          CONFIADO POR MILES DE JUGADORES Y COMUNIDADES DEPORTIVAS ⭐ 4.8/5 EN
-          RESEÑAS REALES
+        <div
+          className="
+  font-bebas
+  max-w-4xl
+  mx-auto
+  h-17.5
+  bg-[#1F2399]
+  text-white
+  rounded-xl
+  px-6
+  flex
+  items-center
+  justify-center
+  gap-6
+  text-xl
+  shadow-lg
+"
+        >
+          <span>CONFIADO POR MILES DE JUGADORES Y COMUNIDADES DEPORTIVAS</span>
+
+          <span className="flex items-center gap-2">
+            ⭐ 4.8/5 EN RESEÑAS REALES
+          </span>
         </div>
       </div>
     </section>

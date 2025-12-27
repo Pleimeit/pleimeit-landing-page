@@ -12,7 +12,10 @@ const ContactComponent = () => {
   };
 
   return (
-    <section id="contact" className="section bg-[#F7F8FE] min-h-screen">
+    <section
+      id="contact"
+      className="section bg-[#F7F8FE] min-h-screen scroll-mt-30 "
+    >
       <div className="section-container">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="max-w-xl w-full">

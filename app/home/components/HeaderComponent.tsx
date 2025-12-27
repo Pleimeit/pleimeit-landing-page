@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 
 const HeaderComponent = () => {
   const [isMenuOpenState, setIsMenuOpenState] = useState(false);
-  const [activeLinkState, setActiveLinkState] = useState("/");
   const [isMobileState, setIsMobileState] = useState(false);
 
   const toggleMenu = () => {
@@ -19,8 +18,7 @@ const HeaderComponent = () => {
     }
   };
 
-  const handleLinkClick = (path: string) => {
-    setActiveLinkState(path);
+  const handleLinkClick = () => {
     setIsMenuOpenState(false);
   };
 
@@ -47,22 +45,12 @@ const HeaderComponent = () => {
     };
   }, [isMenuOpenState]);
 
-  const getNavItemClasses = (path: string) =>
-    `cursor-pointer text-white hover:scale-110 transition ${
-      activeLinkState === path
-        ? "underline underline-offset-4 decoration-4 decoration-orange font-bold"
-        : ""
-    }`;
+  const navItemClasses = "cursor-pointer text-white transition hover:scale-110";
 
   return (
-    <nav className=" fixed top-0 w-full bg-purpleBackground z-50">
-      <div
-        className=" section-container mx-auto mt-2.5
-    flex justify-between items-center
-    xs:h-30 xl:h-26.25
-   "
-      >
-        <Link href="/" onClick={() => handleLinkClick("/")}>
+    <nav className="fixed top-0 w-full bg-purpleBackground z-50">
+      <div className="section-container mt-2.5 flex justify-between items-center xs:h-30 xl:h-26.25">
+        <Link href="/" onClick={handleLinkClick}>
           <Image
             src={isMenuOpenState ? PleimitLogoBurger : PleimitLogo}
             alt="logo"
@@ -72,20 +60,20 @@ const HeaderComponent = () => {
           />
         </Link>
 
-        <ul className="hidden xl:flex gap-40 text-[18px] font-raleway ">
-          <li className={getNavItemClasses("/")}>
-            <Link href="/" onClick={() => handleLinkClick("/")}>
-              Home
+        <ul className="hidden xl:flex gap-40 font-raleway text-sm tracking-[0.25em] uppercase">
+          <li className={navItemClasses}>
+            <Link href="/" onClick={handleLinkClick}>
+              HOME
             </Link>
           </li>
-          <li className={getNavItemClasses("/#aboutUs")}>
-            <Link href="/#about" onClick={() => handleLinkClick("/#aboutUs")}>
-              Nosotros
+          <li className={navItemClasses}>
+            <Link href="/#about" onClick={handleLinkClick}>
+              NOSOTROS
             </Link>
           </li>
-          <li className={getNavItemClasses("/#contact")}>
-            <Link href="/#contact" onClick={() => handleLinkClick("/#contact")}>
-              Contacto
+          <li className={navItemClasses}>
+            <Link href="/#contact" onClick={handleLinkClick}>
+              CONTACTO
             </Link>
           </li>
         </ul>
@@ -94,7 +82,7 @@ const HeaderComponent = () => {
           <button
             onClick={toggleMenu}
             className="xl:hidden text-white"
-            aria-label="open-menú"
+            aria-label="open-menu"
           >
             <FaBars size={35} />
           </button>
@@ -102,7 +90,7 @@ const HeaderComponent = () => {
       </div>
 
       {isMenuOpenState && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white p-8 z-50 menuSlideDown flex flex-col   menu-slide-down">
+        <div className="fixed top-0 left-0 w-full h-full bg-white p-8 z-50 menu-slide-down flex flex-col">
           <div className="flex justify-between items-center mb-12">
             <Link href="/" onClick={toggleMenu}>
               <Image
@@ -122,10 +110,10 @@ const HeaderComponent = () => {
             </button>
           </div>
 
-          <ul className="flex font-raleway flex-col gap-20 text-purpleBackground font-bold text-xl">
-            <li onClick={() => handleLinkClick("/")}>Home</li>
-            <li onClick={() => handleLinkClick("/#about")}>Nosotros</li>
-            <li onClick={() => handleLinkClick("/#contact")}>Contacto</li>
+          <ul className="flex flex-col gap-20 text-purpleBackground font-raleway font-bold text-xl">
+            <li onClick={handleLinkClick}>HOME</li>
+            <li onClick={handleLinkClick}>NOSOTROS</li>
+            <li onClick={handleLinkClick}>CONTACTO</li>
           </ul>
 
           <div className="mt-auto">
@@ -139,9 +127,9 @@ const HeaderComponent = () => {
               />
             </div>
 
-            <h1 className="text-black text-sm text-center">
+            <p className="text-black text-sm text-center font-bebas tracking-[0.25em] uppercase">
               PRIVADA Y SEGURA · GRATIS PARA EMPEZAR
-            </h1>
+            </p>
           </div>
         </div>
       )}

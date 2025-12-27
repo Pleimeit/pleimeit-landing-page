@@ -1,7 +1,7 @@
 import Image from "next/image";
 const RateEventComponent = () => {
   return (
-    <section className="section min-h-screen bg-white flex justify-center items-center">
+    <section className="section h-[800px] bg-white flex justify-center items-center">
       <div
         className=" section-container
      flex flex-row justify-between items-center "
@@ -30,7 +30,7 @@ const RateEventComponent = () => {
           <h1 className="font-inter text-4xl  font-bold">
             Califica tu último evento
           </h1>
-          <p className="text-black font-inter">
+          <p className="text-black font-inter  ">
             Evalúa la experiencia del juego y ayuda a que la comunidad crezca
             con jugadores comprometidos. Tus opiniones son anónimas y mejoran
             los futuros encuentros.

@@ -5,7 +5,7 @@ const AboutUsComponent = () => {
     <section
       id="about"
       className="
-    relative section h-135 flex justify-center items-center overflow-hidden"
+    relative section h-135   mt-16 xl:mt-12 flex justify-center items-center overflow-hidden scroll-mt-30 "
     >
       <div
         className="absolute inset-0 bg-cover bg-position-[center_38%]"
@@ -20,7 +20,15 @@ const AboutUsComponent = () => {
           deporte con la tecnología.
         </h1>
 
-        <p className="text-white max-w-xl  font-inter">
+        <p
+          className="
+  text-white
+  font-inter
+  max-w-4xl
+  leading-relaxed
+  hyphens-auto
+"
+        >
           Nacimos con una idea simple: facilitar que más personas puedan jugar,
           conectar y disfrutar del deporte sin complicaciones. Nuestro equipo —
           Javier, Harold y Joshep — combina experiencia en tecnología, diseño y

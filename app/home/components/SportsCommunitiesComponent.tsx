@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const SportsCommunitiesComponent = () => {
   return (
-    <section className="section min-h-screen bg-white flex items-center">
-      <div className="section-container relative flex flex-row items-center justify-between h-120 xl:py-20 bg-lila rounded-3xl p-10">
+    <section className="section bg-white flex items-center h-127.5 ">
+      <div className="section-container relative flex justify-between py-20 bg-lila rounded-3xl p-10 pb-40">
         <div className="w-105 flex flex-col gap-1">
           <h1 className="font-inter text-4xl font-bold">
             Participa en comunidades deportivas
