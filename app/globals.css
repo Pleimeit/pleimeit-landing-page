@@ -15,7 +15,8 @@
   --color-white: #ffffff;
   --color-textBlack: #111322;
   --color-lila: #f2f1fa;
-  --color-textBlackSecundary: #111322;
+  --color-textGray: #dddddd;
+  --color-textGraySecundary: #5a6271;
 }
 :root {
   --font-raleway: "Raleway", sans-serif;

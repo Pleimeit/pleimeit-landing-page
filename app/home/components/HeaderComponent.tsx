@@ -48,8 +48,8 @@ const HeaderComponent = () => {
   const navItemClasses = "cursor-pointer text-white transition hover:scale-110";
 
   return (
-    <nav className="fixed top-0 w-full bg-purpleBackground z-50">
-      <div className="section-container mt-2.5 flex justify-between items-center xs:h-30 xl:h-26.25">
+    <nav className=" fixed top-0 w-full bg-purpleBackground z-50">
+      <div className="section-container flex justify-between items-center xs:h-30 xl:h-18">
         <Link href="/" onClick={handleLinkClick}>
           <Image
             src={isMenuOpenState ? PleimitLogoBurger : PleimitLogo}

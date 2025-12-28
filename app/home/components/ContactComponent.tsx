@@ -47,7 +47,7 @@ const ContactComponent = () => {
                   ¿Tienes dudas?
                 </h2>
 
-                <p className="text-textBlackSecundary mb-8 leading-relaxed font-inter">
+                <p className="text-textBlack mb-8 leading-relaxed font-inter">
                   Cuéntanos qué tienes en mente. Nos encantará escucharte y ver
                   cómo podemos ayudarte a hacer crecer tu comunidad deportiva.
                   <br />
@@ -64,7 +64,7 @@ const ContactComponent = () => {
                         type="text"
                         required
                         placeholder="Ejemplo: Joseph Montoya"
-                        className="mt-1 w-full rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full text-textGraySecundary rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
 
@@ -76,7 +76,7 @@ const ContactComponent = () => {
                         type="email"
                         required
                         placeholder="Ejemplo: joseph@email.com"
-                        className="mt-1 w-full rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary   border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
                   </div>
@@ -90,7 +90,7 @@ const ContactComponent = () => {
                         type="text"
                         required
                         placeholder="Ejemplo: Soporte técnico"
-                        className="mt-1 w-full rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
 
@@ -114,7 +114,7 @@ const ContactComponent = () => {
                           type="tel"
                           required
                           placeholder="Número de teléfono"
-                          className="w-full rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                          className="w-full rounded-lg border text-textGraySecundary  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                         />
                       </div>
                     </div>
@@ -128,7 +128,7 @@ const ContactComponent = () => {
                       rows={4}
                       required
                       placeholder="Cuéntanos brevemente cómo podemos ayudarte."
-                      className="mt-1 w-full rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                      className="mt-1 w-full rounded-lg border border-gray-200  text-textGraySecundary  shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                     />
                   </div>
 

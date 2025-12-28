@@ -5,10 +5,10 @@ const CreateGameComponent = () => {
     <section className="section h-127.5 bg-white flex items-center">
       <div className=" section-container  relative flex flex-row items-center justify-between h-120 xl:py-20 bg-lila rounded-3xl p-10">
         <div className="w-105 flex flex-col gap-1">
-          <h1 className="font-inter text-4xl font-bold text-black">
+          <h1 className="font-inter text-4xl font-bold text-textBlack ">
             Crea tu propio encuentro deportivo
           </h1>
-          <p className="text-black font-inter">
+          <p className="text-textBlack  font-inter">
             Organiza partidos o entrenamientos con facilidad. Define el lugar,
             fecha y tipo de juego; invita a tus amigos o deja el evento abierto
             a nuevos jugadores.

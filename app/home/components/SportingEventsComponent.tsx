@@ -24,10 +24,10 @@ const SportingEventsComponent = () => {
         </div>
 
         <div className="w-87.5 flex flex-col gap-1  ">
-          <h1 className="font-inter text-4xl text-black font-bold">
+          <h1 className="font-inter text-4xl text-textBlack font-bold">
             Explora los eventos deportivos cerca
           </h1>
-          <p className="text-black font-inter">
+          <p className="text-textBlack font-inter">
             Descubre partidos, retos y actividades según tu ubicación. Filtra
             por deporte, día o nivel de juego, y únete con un solo clic .
           </p>

@@ -66,7 +66,7 @@ const FooterComponent = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div className="flex font-inter flex-col sm:flex-row gap-2 xs:text-xs lg:text-sm text-textBlackSecundary">
+            <div className="flex font-inter flex-col sm:flex-row gap-2 xs:text-xs lg:text-sm text-textGraySecundary">
               <p>© 2025 Pleimeit. Todos los derechos reservados.</p>
               <p>Diseñado con 💜 para deportistas y comunidades activas.</p>
             </div>

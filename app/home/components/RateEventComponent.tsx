@@ -27,10 +27,10 @@ const RateEventComponent = () => {
         </div>
 
         <div className="w-87.5 flex flex-col gap-1  ">
-          <h1 className="font-inter text-4xl  font-bold">
+          <h1 className="font-inter text-4xl text-textBlack  font-bold">
             Califica tu último evento
           </h1>
-          <p className="text-black font-inter  ">
+          <p className="text-textBlack font-inter  ">
             Evalúa la experiencia del juego y ayuda a que la comunidad crezca
             con jugadores comprometidos. Tus opiniones son anónimas y mejoran
             los futuros encuentros.

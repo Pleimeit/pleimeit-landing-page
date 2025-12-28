@@ -5,10 +5,10 @@ const SportsCommunitiesComponent = () => {
     <section className="section bg-white flex items-center h-127.5 ">
       <div className="section-container relative flex justify-between py-20 bg-lila rounded-3xl p-10 pb-40">
         <div className="w-105 flex flex-col gap-1">
-          <h1 className="font-inter text-4xl font-bold">
+          <h1 className="font-inter text-4xl text-textBlack  font-bold">
             Participa en comunidades deportivas
           </h1>
-          <p className="text-black font-inter">
+          <p className="text-textBlack  font-inter">
             Conecta con jugadores de tu mismo deporte, comparte tips, organiza
             nuevos partidos y mantente al día con lo que pasa en tu comunidad.
           </p>
