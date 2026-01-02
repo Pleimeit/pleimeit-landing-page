@@ -1,22 +1,48 @@
 "use client";
 import ButtonComponent from "@/app/components/ButtonComponent";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ContactComponent = () => {
   const [isSubmittedState, setIsSubmittedState] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmittedState(true);
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="contact"
-      className="section bg-[#F7F8FE] min-h-screen scroll-mt-30 "
+      className={`
+        section bg-[#F7F8FE] xs:py-20 lg:py-40 min-h-screen
+        transition-all duration-700 ease-out
+        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+      `}
     >
-      <div className="section-container">
+      <div className="section-container p-5 lg:p-0 xl:p-6 xxl:p-8">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="max-w-xl w-full">
             {isSubmittedState ? (
@@ -43,15 +69,15 @@ const ContactComponent = () => {
               </div>
             ) : (
               <>
-                <h2 className="font-inter text-3xl lg:text-4xl font-extrabold text-textBlack mb-4">
+                <h2 className="font-inter text-2xl text-center lg:text-left lg:text-4xl font-extrabold text-textBlack mb-4">
                   ¿Tienes dudas?
                 </h2>
 
-                <p className="text-textBlack mb-8 leading-relaxed font-inter">
+                <p className="text-textBlack mb-8 leading-relaxed font-inter text-[16px] text-justify lg:text-left lg:text-[20px]">
                   Cuéntanos qué tienes en mente. Nos encantará escucharte y ver
                   cómo podemos ayudarte a hacer crecer tu comunidad deportiva.
                   <br />
-                  Completa el formulario y te responderemos pronto ⚡
+                  Completa el formulario y te responderemos pronto.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -76,7 +102,7 @@ const ContactComponent = () => {
                         type="email"
                         required
                         placeholder="Ejemplo: joseph@email.com"
-                        className="mt-1 w-full rounded-lg border text-textGraySecundary   border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
                   </div>
@@ -90,7 +116,7 @@ const ContactComponent = () => {
                         type="text"
                         required
                         placeholder="Ejemplo: Soporte técnico"
-                        className="mt-1 w-full rounded-lg border text-textGraySecundary  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
 
@@ -114,7 +140,7 @@ const ContactComponent = () => {
                           type="tel"
                           required
                           placeholder="Número de teléfono"
-                          className="w-full rounded-lg border text-textGraySecundary  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                          className="w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                         />
                       </div>
                     </div>
@@ -128,18 +154,28 @@ const ContactComponent = () => {
                       rows={4}
                       required
                       placeholder="Cuéntanos brevemente cómo podemos ayudarte."
-                      className="mt-1 w-full rounded-lg border border-gray-200  text-textGraySecundary  shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                      className="mt-1 w-full rounded-lg border border-gray-200 text-textGraySecundary shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                     />
                   </div>
 
-                  <ButtonComponent text="Enviar mensaje" link="/" />
+                  <ButtonComponent text="Enviar mensaje" type="submit" />
                 </form>
               </>
             )}
           </div>
 
           {!isSubmittedState && (
-            <div className="hidden lg:flex flex-1 justify-end">
+            <div
+              className={`
+                hidden lg:flex flex-1 justify-end
+                transition-all duration-700 delay-150
+                ${
+                  isVisible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-16"
+                }
+              `}
+            >
               <Image
                 src="/images/home/Workingman.png"
                 alt="Contacto Pleimeit"

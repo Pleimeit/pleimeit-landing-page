@@ -7,10 +7,10 @@ const FooterComponent = () => {
     <footer className="bg-white border-t border-gray-200  ">
       <div
         className="container mx-auto 
-     gap-y-0  xl:gap-y-8  xl:py-20"
+     gap-y-0  xl:gap-y-8  xs:p-10 lg:p-5 xl:p-14 xxl:p-15 lg:py-20"
       >
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6">
-          <ul className="flex flex-col font-inter xl:flex-row gap-6  xs:text-md lg:text-lg text-textBlack font-medium">
+          <ul className="flex flex-col font-inter lg:flex-row gap-6  xs:text-md lg:text-lg text-textBlack font-medium">
             <li>
               <Link href="#contact" className="hover:text-purpleBackground">
                 Contacto

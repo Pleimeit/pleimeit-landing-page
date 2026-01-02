@@ -49,7 +49,7 @@ const HeaderComponent = () => {
 
   return (
     <nav className=" fixed top-0 w-full bg-purpleBackground z-50">
-      <div className="section-container flex justify-between items-center xs:h-30 xl:h-18">
+      <div className="section-container flex justify-between items-center xs:h-20 xl:h-18">
         <Link href="/" onClick={handleLinkClick}>
           <Image
             src={isMenuOpenState ? PleimitLogoBurger : PleimitLogo}
@@ -60,9 +60,9 @@ const HeaderComponent = () => {
           />
         </Link>
 
-        <ul className="hidden xl:flex gap-40 font-raleway text-sm tracking-[0.25em] uppercase">
+        <ul className="hidden lg:flex gap-17.5 font-raleway text-sm tracking-[0.25em] uppercase">
           <li className={navItemClasses}>
-            <Link href="/" onClick={handleLinkClick}>
+            <Link href="/#home" onClick={handleLinkClick}>
               HOME
             </Link>
           </li>
@@ -81,7 +81,7 @@ const HeaderComponent = () => {
         {!isMenuOpenState && (
           <button
             onClick={toggleMenu}
-            className="xl:hidden text-white"
+            className="lg:hidden text-white"
             aria-label="open-menu"
           >
             <FaBars size={35} />
@@ -111,9 +111,23 @@ const HeaderComponent = () => {
           </div>
 
           <ul className="flex flex-col gap-20 text-purpleBackground font-raleway font-bold text-xl">
-            <li onClick={handleLinkClick}>HOME</li>
-            <li onClick={handleLinkClick}>NOSOTROS</li>
-            <li onClick={handleLinkClick}>CONTACTO</li>
+            <li>
+              <Link href="/#home" onClick={handleLinkClick}>
+                HOME
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/#about" onClick={handleLinkClick}>
+                NOSOTROS
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/#contact" onClick={handleLinkClick}>
+                CONTACTO
+              </Link>
+            </li>
           </ul>
 
           <div className="mt-auto">
