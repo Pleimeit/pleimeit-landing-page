@@ -11,44 +11,30 @@ import SportsCommunitiesComponent from "./home/components/SportsCommunitiesCompo
 
 export default function Page() {
   return (
-    <main className="bg-white h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+    <main
+      className="
+      bg-white  
+    h-screen
+    overflow-y-scroll
+    overflow-x-hidden
+
+    lg:snap-y
+    lg:snap-mandatory
+
+    scroll-smooth
+      "
+    >
       <HeaderComponent />
 
-      <section id="home" className="snap-start">
-        <BannerComponent />
-      </section>
-
-      <section className="snap-start">
-        <SportingEventsComponent />
-      </section>
-
-      <section className="snap-start">
-        <CreateGameComponent />
-      </section>
-
-      <section className="snap-start">
-        <RateEventComponent />
-      </section>
-
-      <section className="snap-start">
-        <SportsCommunitiesComponent />
-      </section>
-
-      <section id="about" className="snap-start">
-        <AboutUsComponent />
-      </section>
-
-      <section id="contact" className="snap-start">
-        <ContactComponent />
-      </section>
-
-      <section className="snap-start">
-        <DownloadComponent />
-      </section>
-
-      <section className="snap-start">
-        <FooterComponent />
-      </section>
+      <BannerComponent />
+      <SportingEventsComponent />
+      <CreateGameComponent />
+      <RateEventComponent />
+      <SportsCommunitiesComponent />
+      <AboutUsComponent />
+      <ContactComponent />
+      <DownloadComponent />
+      <FooterComponent />
     </main>
   );
 }

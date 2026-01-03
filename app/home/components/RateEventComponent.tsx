@@ -21,19 +21,20 @@ const RateEventComponent = () => {
   return (
     <section
       ref={sectionRef}
-      className="section w-full bg-white flex justify-center items-center  xs:py-24 lg:py-16 lg:h-200"
+      className=" lg:min-h-screen xs:h-157 w-full bg-white flex justify-center items-center     lg:snap-center
+    lg:scroll-mt-18 xs:py-24 lg:py-16 lg:h-200"
     >
       <div
         className={`
           section-container flex flex-col lg:flex-row
           items-center lg:justify-center gap-10 lg:gap-30
-          transition-all duration-700 ease-out
+          transition-all duration-700 ease-out  max-w-7xl mx-auto px-6 md:px-12 lg:px-20
           ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }
         `}
       >
-        <div className="order-1 lg:order-2 w-full lg:w-87.5 flex flex-col gap-4 text-center lg:text-left">
+        <div className="order-1 lg:order-2 w-full lg:w-87.5 xl:w-100.5 flex flex-col gap-4 text-center lg:text-left">
           <h1 className="font-inter xs:text-2xl  lg:text-4xl text-textBlack font-bold text-start">
             Califica tu último evento
           </h1>
@@ -46,7 +47,7 @@ const RateEventComponent = () => {
         </div>
 
         <div className="order-2 lg:order-1 flex flex-row items-center gap-8 lg:gap-12.5">
-          <div className="shadow-[0_8px_30px_rgba(174,172,243,0.4)] rounded-2xl overflow-hidden">
+          <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
             <Image
               src="/images/home/RateEvent1.png"
               width={250}
@@ -56,7 +57,7 @@ const RateEventComponent = () => {
             />
           </div>
 
-          <div className="shadow-[0_8px_30px_rgba(174,172,243,0.4)] rounded-2xl overflow-hidden">
+          <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)]  rounded-2xl overflow-hidden">
             <Image
               src="/images/home/RateEvent2.png"
               width={250}

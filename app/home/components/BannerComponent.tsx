@@ -39,11 +39,22 @@ const BannerComponent = () => {
   return (
     <section
       id="home"
-      className="relative bg-purpleBackground text-white pt-28.25 xl:pt-24"
+      className="
+    relative bg-purpleBackground text-white
+    pt-28.25 xl:pt-24
+
+    min-h-[96vh]
+    flex
+    items-center
+
+    lg:snap-start
+    lg:h-[screen]
+    lg:scroll-mt-18
+  "
     >
-      <div className="section-container flex flex-col lg:grid lg:grid-cols-2 xs:h-145 sm:h-142 lg:h-162 xl:h-172 xxl:h-205 relative z-10">
+      <div className="section-container px-6 md:px-12 lg:px-20 max-w-7xl flex flex-col lg:grid lg:grid-cols-2 xs:h-145 sm:h-142 lg:h-162 xl:h-172 xxl:h-205 relative z-10">
         <div className="flex flex-col justify-center lg:mb-40">
-          <div className="max-w-xl h-55  xl:h-50   overflow-hidden   xs:mb-0 lg:mb-8">
+          <div className="max-w-xl h-55  xl:h-57   overflow-hidden   xs:mb-0 lg:mb-8">
             <h1 className="font-bebas xs:text-3xl lg:text-4xl xl:text-5xl mb-6">
               {title}
             </h1>
@@ -64,24 +75,24 @@ const BannerComponent = () => {
             />
           </div>
 
-          <div className="flex items-center sm:justify-center lg:justify-start gap-4 mb-6">
+          <div className="flex items-center sm:justify-center lg:justify-start xs:gap-5 lg:gap-10 mb-6">
             <Image
               src="/images/home/AppStore.png"
               alt="App Store"
               width={200}
               height={80}
-              className="h-14 w-40 xl:h-20 xl:w-auto"
+              className="h-14 w-40 xl:h-20 xl:w-auto cursor-pointer transition-transform hover:scale-105"
             />
             <Image
               src="/images/home/GooglePlay.png"
               alt="Google Play"
               width={200}
               height={80}
-              className="h-14 w-40 xl:h-20 xl:w-auto"
+              className="h-14 w-40 xl:h-20 xl:w-auto cursor-pointer transition-transform hover:scale-105"
             />
           </div>
 
-          <p className="font-bebas text-sm xl:text-xl tracking-[0.25em] uppercase sm:text-center lg:text-start ">
+          <p className="font-bebas text-sm xl:text-xl tracking-[0.25em] uppercase sm:text-center lg:text-start mt-5 ">
             PRIVADA Y SEGURA · GRATIS PARA EMPEZAR
           </p>
         </div>
@@ -89,7 +100,7 @@ const BannerComponent = () => {
         <div className="hidden lg:block" />
       </div>
 
-      <div className="hidden lg:block absolute right-0 top-30 w-full lg:w-1/2 h-[78vh] pointer-events-none">
+      <div className="hidden lg:block absolute right-0 top-30 w-full lg:w-[53%] lg:right-2 h-[78vh] pointer-events-none">
         <Image
           key={currentIndex}
           src={image}
@@ -100,7 +111,7 @@ const BannerComponent = () => {
         />
       </div>
 
-      <div className="absolute -bottom-40 xs:-bottom-50 lg:-bottom-10 w-full z-30 px-0 lg:px-4">
+      <div className="hidden lg:block absolute -bottom-40 xs:-bottom-50 lg:-bottom-10 w-full z-30 px-0 lg:px-4">
         <div className="font-bebas lg:max-w-4xl mx-auto bg-[#1F2399] text-white rounded-none lg:rounded-xl px-6 py-6 flex flex-col md:flex-row items-center justify-center gap-4 text-xl lg:text-2xl shadow-lg">
           <span className="block md:hidden">
             CONFIADO POR MILES DE JUGADORES Y COMUNIDADES DEPORTIVAS ⭐ 4.8/5 EN

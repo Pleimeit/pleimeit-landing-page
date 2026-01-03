@@ -8,11 +8,7 @@ const DownloadComponent = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else {
-          setIsVisible(false);
-        }
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.3 }
     );
@@ -29,12 +25,13 @@ const DownloadComponent = () => {
       ref={sectionRef}
       className={`
         relative bg-purpleBackground text-white overflow-hidden
-        h-185 xl:min-h-screen flex items-center
-        transition-all duration-700 ease-out
+        xs:h-185  lg:h-screen xl:h-screen xxl:h-screen flex items-center
+        transition-all duration-700 ease-out     lg:snap-center
+    lg:scroll-mt-4.5
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
       `}
     >
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto w-full px-6 lg:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full items-start">
           <div
             className={`
@@ -66,26 +63,16 @@ const DownloadComponent = () => {
             </div>
 
             <div className="flex flex-row xs:justify-center lg:justify-start items-center gap-4 mb-12 lg:mb-0">
-              <a
-                href="#"
-                className="transition-transform hover:scale-105 active:scale-95"
-              >
-                <img
-                  src="/images/home/AppStore.png"
-                  alt="Descargar en App Store"
-                  className="h-12 lg:h-14 w-auto cursor-pointer"
-                />
-              </a>
-              <a
-                href="#"
-                className="transition-transform hover:scale-105 active:scale-95"
-              >
-                <img
-                  src="/images/home/GooglePlay.png"
-                  alt="Descargar en Google Play"
-                  className="h-12 lg:h-14 w-auto cursor-pointer"
-                />
-              </a>
+              <img
+                src="/images/home/AppStore.png"
+                alt="Descargar en App Store"
+                className="h-12 lg:h-14 w-auto cursor-pointer transition-transform hover:scale-105"
+              />
+              <img
+                src="/images/home/GooglePlay.png"
+                alt="Descargar en Google Play"
+                className="h-12 lg:h-14 w-auto cursor-pointer transition-transform hover:scale-105"
+              />
             </div>
           </div>
 
@@ -95,7 +82,7 @@ const DownloadComponent = () => {
 
       <div
         className={`
-          absolute bottom-0 right-0 w-full lg:w-1/2 h-full pointer-events-none
+          absolute bottom-0 right-0 w-1/2 h-full pointer-events-none
           hidden lg:flex items-end justify-end
           transition-all duration-700 delay-200
           ${
@@ -103,7 +90,7 @@ const DownloadComponent = () => {
           }
         `}
       >
-        <div className="relative w-full h-[90%] lg:h-full max-w-170.5">
+        <div className="relative w-full h-auto xl:max-w-247.5">
           <img
             src="/images/home/Athletes-footer.png"
             alt="Atletas Pleimeit en Desktop"

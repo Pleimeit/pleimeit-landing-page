@@ -38,11 +38,14 @@ const ContactComponent = () => {
       id="contact"
       className={`
         section bg-[#F7F8FE] xs:py-20 lg:py-40 min-h-screen
-        transition-all duration-700 ease-out
-        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
+      
+      
       `}
     >
-      <div className="section-container p-5 lg:p-0 xl:p-6 xxl:p-8">
+      <div
+        className="section-container p-5 lg:p-0 xl:p-6 xxl:p-8 max-w-7xl mx-auto px-6 md:px-12 lg:px-20  lg:snap-center
+    lg:scroll-mt-4.5 "
+      >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="max-w-xl w-full">
             {isSubmittedState ? (

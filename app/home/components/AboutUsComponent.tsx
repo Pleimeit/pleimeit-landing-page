@@ -17,7 +17,8 @@ const AboutUsComponent = () => {
         flex justify-center items-center
         overflow-hidden
         bg-purpleBackground lg:bg-transparent
-        transition-all duration-700 ease-out
+        transition-all duration-700 ease-out  lg:snap-center
+    lg:scroll-mt-18
         ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
       `}
     >
