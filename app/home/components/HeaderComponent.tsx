@@ -48,8 +48,8 @@ const HeaderComponent = () => {
   const navItemClasses = "cursor-pointer text-white transition hover:scale-110";
 
   return (
-    <nav className=" fixed top-0 w-full bg-purpleBackground z-50">
-      <div className="section-container flex justify-between items-center xs:h-20 xl:h-18">
+    <nav className="fixed top-0 w-full bg-purpleBackground z-50">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 flex justify-between items-center h-18">
         <Link href="/" onClick={handleLinkClick}>
           <Image
             src={isMenuOpenState ? PleimitLogoBurger : PleimitLogo}
@@ -132,16 +132,23 @@ const HeaderComponent = () => {
 
           <div className="mt-auto">
             <div className="flex gap-3 mb-6 items-center justify-center">
-              <Image src={AppStore} alt="app-store" height={150} width={110} />
+              <Image
+                src={AppStore}
+                alt="app-store"
+                height={250}
+                width={150}
+                className="h-13 w-38"
+              />
               <Image
                 src={GooglePlay}
                 alt="google-play"
-                height={150}
-                width={110}
+                height={250}
+                width={150}
+                className="h-13 w-38"
               />
             </div>
 
-            <p className="text-black text-sm text-center font-bebas tracking-[0.25em] uppercase">
+            <p className="text-black text-[13px] text-center font-bebas tracking-[0.25em] uppercase">
               PRIVADA Y SEGURA · GRATIS PARA EMPEZAR
             </p>
           </div>
