@@ -24,7 +24,7 @@ const CreateGameComponent = () => {
       className="
        bg-white
   lg:snap-center
-    lg:h-screen
+    lg:min-h-[calc(100vh-72px)]
     lg:scroll-mt-18
     lg:flex
     lg:items-center

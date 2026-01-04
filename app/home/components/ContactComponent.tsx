@@ -37,15 +37,13 @@ const ContactComponent = () => {
       ref={sectionRef}
       id="contact"
       className={`
-        section bg-[#F7F8FE] xs:py-20 lg:py-40 min-h-screen
+        section bg-[#F7F8FE] xs:py-20 lg:py-40 lg:min-h-[calc(100vh-72px)] lg:snap-center
+    lg:scroll-mt-4.5 
       
       
       `}
     >
-      <div
-        className="section-container p-5 lg:p-0 xl:p-6 xxl:p-8 max-w-7xl mx-auto px-6 md:px-12 lg:px-20  lg:snap-center
-    lg:scroll-mt-4.5 "
-      >
+      <div className="section-container p-5 lg:p-0 xl:p-6 xxl:p-8 max-w-7xl mx-auto px-6 md:px-12 lg:px-20  ">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           <div className="max-w-xl w-full">
             {isSubmittedState ? (
@@ -72,10 +70,16 @@ const ContactComponent = () => {
               </div>
             ) : (
               <>
-                <h2 className="font-inter text-2xl text-center lg:text-left lg:text-4xl font-extrabold text-textBlack mb-4">
+                <h2
+                  className={`
+    font-inter text-2xl text-center lg:text-left lg:text-4xl
+    font-extrabold text-textBlack mb-4
+    transition-all duration-700 ease-out
+    ${isVisible ? "opacity-100 translate-y-0 " : "opacity-0 translate-y-6 "}
+  `}
+                >
                   ¿Tienes dudas?
                 </h2>
-
                 <p className="text-textBlack mb-8 leading-relaxed font-inter text-[16px] text-justify lg:text-left lg:text-[20px]">
                   Cuéntanos qué tienes en mente. Nos encantará escucharte y ver
                   cómo podemos ayudarte a hacer crecer tu comunidad deportiva.
@@ -133,10 +137,16 @@ const ContactComponent = () => {
                           defaultValue=""
                           className="rounded-lg border border-gray-200 shadow-sm px-3 py-3 text-sm focus:outline-none"
                         >
-                          <option value="" disabled>
+                          <option
+                            value=""
+                            disabled
+                            className="text-textGraySecundary"
+                          >
                             País
                           </option>
-                          <option value="PE">PE</option>
+                          <option value="PE" className="text-textGraySecundary">
+                            PE
+                          </option>
                         </select>
 
                         <input

@@ -21,8 +21,8 @@ const RateEventComponent = () => {
   return (
     <section
       ref={sectionRef}
-      className=" lg:min-h-screen xs:h-157 w-full bg-white flex justify-center items-center     lg:snap-center
-    lg:scroll-mt-18 xs:py-24 lg:py-16 lg:h-200"
+      className="   lg:min-h-[calc(100vh-72px)] xs:h-157  sm:h-201 w-full bg-white flex justify-center items-center     lg:snap-center
+    lg:scroll-mt-18 xs:py-24 lg:py-16 "
     >
       <div
         className={`

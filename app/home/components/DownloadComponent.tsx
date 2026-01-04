@@ -25,7 +25,7 @@ const DownloadComponent = () => {
       ref={sectionRef}
       className={`
         relative bg-purpleBackground text-white overflow-hidden
-        xs:h-185  lg:h-screen xl:h-screen xxl:h-screen flex items-center
+        xs:h-185  lg:min-h-[calc(100vh-72px)] flex items-center
         transition-all duration-700 ease-out     lg:snap-center
     lg:scroll-mt-4.5
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}

@@ -43,12 +43,12 @@ const BannerComponent = () => {
     relative bg-purpleBackground text-white
     pt-28.25 xl:pt-24
 
-    min-h-[96vh]
+  
     flex
     items-center
 
     lg:snap-start
-    lg:h-[screen]
+lg:min-h-[calc(100vh-152px)]
     lg:scroll-mt-18
   "
     >
