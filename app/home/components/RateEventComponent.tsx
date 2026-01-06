@@ -35,7 +35,7 @@ const RateEventComponent = () => {
         `}
       >
         <div className="order-1 lg:order-2 w-full lg:w-87.5 xl:w-100.5 flex flex-col gap-4 text-center lg:text-left">
-          <h1 className="font-inter xs:text-2xl  lg:text-4xl text-textBlack font-bold text-start">
+          <h1 className="font-inter text-2xl xs:text-2xl  lg:text-4xl text-textBlack font-bold text-start">
             Califica tu último evento
           </h1>
 

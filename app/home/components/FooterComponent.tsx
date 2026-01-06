@@ -4,10 +4,7 @@ import { FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 const FooterComponent = () => {
   return (
-    <footer
-      className="bg-white border-t border-gray-200     lg:snap-center
-    lg:scroll-mt-4.5"
-    >
+    <footer className="bg-white border-t border-gray-200 lg:snap-center lg:scroll-mt-4.5">
       <div className="max-w-7xl mx-auto w-full px-6 lg:px-20 py-10 lg:py-20">
         <div className="flex flex-col lg:flex-row justify-between lg:items-end gap-6">
           <ul className="flex flex-col font-inter lg:flex-row gap-6 xs:text-md lg:text-lg text-textBlack font-medium">
@@ -44,7 +41,7 @@ const FooterComponent = () => {
         </div>
 
         <div className="mt-8 flex flex-col gap-8 text-center">
-          <div className="flex lg:hidden items-center gap-6 xs:justify-between">
+          <div className="flex lg:hidden items-center gap-6 justify-between xs:justify-between">
             <Image
               src="/images/home/PleimitLogoBurger.png"
               alt="Pleimeit"
@@ -66,7 +63,22 @@ const FooterComponent = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-            <div className="flex font-inter flex-col sm:flex-row gap-2 xs:text-xs lg:text-sm text-textGraySecundary">
+            <div
+              className="
+                w-full
+                flex font-inter
+                flex-col
+                items-center
+                text-center
+                gap-2
+                xs:text-xs
+                lg:text-sm
+                text-textGraySecundary
+                lg:flex-row
+                lg:items-start
+                lg:text-left
+              "
+            >
               <p>© 2025 Pleimeit. Todos los derechos reservados.</p>
               <p>Diseñado con 💜 para deportistas y comunidades activas.</p>
             </div>

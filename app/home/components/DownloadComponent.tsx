@@ -35,14 +35,12 @@ const DownloadComponent = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full items-start">
           <div
             className={`
-              flex flex-col pt-16 lg:pt-12 xl:pt-16
-              transition-all duration-700 delay-100
-              ${
-                isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-16"
-              }
-            `}
+    flex flex-col pt-16 lg:pt-12 xl:pt-16
+    transition-all duration-700 delay-100
+    items-center md:items-center lg:items-start
+    text-center md:text-center lg:text-left
+    ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"}
+  `}
           >
             <h1 className="text-2xl lg:text-4xl font-extrabold leading-tight mb-4 uppercase tracking-tight">
               Descarga Pleimeit y únete a tu <br className="hidden md:block" />

@@ -42,7 +42,7 @@ const SportingEventsComponent = () => {
 
       <div
         className={`
-          section-container flex flex-col lg:flex-row
+          section-container flex flex-col lg:flex-row py-12 
           flex-1
           items-center lg:justify-center gap-6.75 lg:gap-30
           transition-all duration-700 ease-out xs:mt-6 md:mt-5 px-6 md:px-12 lg:px-20 max-w-7xl
@@ -51,8 +51,8 @@ const SportingEventsComponent = () => {
           }
         `}
       >
-        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-90 flex flex-col gap-4 text-center lg:text-left">
-          <h1 className="font-inter xs:text-2xl lg:text-4xl text-textBlack font-bold">
+        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-90 flex flex-col gap-4 text-start lg:text-left">
+          <h1 className="font-inter text-2xl xs:text-2xl lg:text-4xl text-textBlack font-bold">
             Explora los eventos deportivos cerca
           </h1>
 
