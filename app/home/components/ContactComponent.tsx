@@ -2,6 +2,7 @@
 import ButtonComponent from "@/app/components/ButtonComponent";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import CountrySelect from "@/app/components/CountrySelect";
 
 const ContactComponent = () => {
   const [isSubmittedState, setIsSubmittedState] = useState(false);
@@ -37,7 +38,7 @@ const ContactComponent = () => {
       ref={sectionRef}
       id="contact"
       className={`
-        section bg-[#F7F8FE] py-12 md:py-20 lg:py-24lg:min-h-[calc(100vh-72px)] lg:snap-center
+        section bg-[#F8F8FF] py-12 md:py-20 lg:py-24lg:min-h-[calc(100vh-72px)] lg:snap-center
     lg:scroll-mt-4.5 
       
       
@@ -97,7 +98,7 @@ const ContactComponent = () => {
                         type="text"
                         required
                         placeholder="Ejemplo: Joseph Montoya"
-                        className="mt-1 w-full text-textGraySecundary rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full text-textGraySecundary bg-white rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
 
@@ -109,7 +110,7 @@ const ContactComponent = () => {
                         type="email"
                         required
                         placeholder="Ejemplo: joseph@email.com"
-                        className="mt-1 w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
                   </div>
@@ -123,7 +124,7 @@ const ContactComponent = () => {
                         type="text"
                         required
                         placeholder="Ejemplo: Soporte técnico"
-                        className="mt-1 w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                        className="mt-1 w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                       />
                     </div>
 
@@ -132,28 +133,12 @@ const ContactComponent = () => {
                         Número
                       </label>
                       <div className="mt-1 flex gap-2">
-                        <select
-                          required
-                          defaultValue=""
-                          className="rounded-lg border border-gray-200 shadow-sm px-3 py-3 text-sm focus:outline-none"
-                        >
-                          <option
-                            value=""
-                            disabled
-                            className="text-textGraySecundary"
-                          >
-                            País
-                          </option>
-                          <option value="PE" className="text-textGraySecundary">
-                            PE
-                          </option>
-                        </select>
-
+                        <CountrySelect />
                         <input
                           type="tel"
                           required
                           placeholder="Número de teléfono"
-                          className="w-full rounded-lg border text-textGraySecundary border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                          className="w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                         />
                       </div>
                     </div>
@@ -167,7 +152,7 @@ const ContactComponent = () => {
                       rows={4}
                       required
                       placeholder="Cuéntanos brevemente cómo podemos ayudarte."
-                      className="mt-1 w-full rounded-lg border border-gray-200 text-textGraySecundary shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
+                      className="mt-1 w-full rounded-lg border border-gray-200 bg-white  text-textGraySecundary shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                     />
                   </div>
 
