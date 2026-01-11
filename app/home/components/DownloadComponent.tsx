@@ -27,7 +27,7 @@ const DownloadComponent = () => {
       ref={sectionRef}
       className={`
         relative bg-purpleBackground text-white overflow-hidden
-       py-12 md:py-20 lg:py-24 lg:min-h-[calc(100vh-72px)] flex items-center
+       py-12 md:py-20 lg:py-24  lg:min-h-[calc(100vh-72px)] flex items-center
         transition-all duration-700 ease-out     lg:snap-center
     lg:scroll-mt-4.5
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
@@ -44,7 +44,7 @@ const DownloadComponent = () => {
     ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-16"}
   `}
           >
-            <h1 className="text-2xl lg:text-4xl font-extrabold leading-tight mb-4 uppercase tracking-tight">
+            <h1 className="text-2xl lg:text-[48px] font-extrabold leading-tight mb-4  tracking-tight">
               Descarga Pleimeit y únete a tu <br className="hidden md:block" />
               comunidad deportiva
             </h1>
@@ -100,25 +100,24 @@ const DownloadComponent = () => {
           <div className="hidden lg:block" />
         </div>
       </div>
-
       <div
         className={`
-          absolute bottom-0 right-0 w-1/2 h-full pointer-events-none
-          hidden lg:flex items-end justify-end
-          transition-all duration-700 delay-200
-          ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
-          }
-        `}
+    hidden lg:block
+    absolute right-0 bottom-0
+    w-full lg:w-[53%]
+    h-[78vh]
+    pointer-events-none
+    transition-all duration-700 delay-200
+    ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}
+  `}
       >
-        <div className="relative w-full h-auto xl:max-w-247.5">
-          <img
-            src="/images/home/Athletes-footer.png"
-            alt="Atletas Pleimeit en Desktop"
-            className="w-full h-full object-bottom"
-            style={{ objectPosition: "center bottom" }}
-          />
-        </div>
+        <Image
+          src="/images/home/Athletes-footer.png"
+          alt="Atletas Pleimeit"
+          fill
+          quality={90}
+          className="object-contain object-bottom"
+        />
       </div>
     </section>
   );

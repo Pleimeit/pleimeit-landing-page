@@ -25,12 +25,12 @@ const AboutUsComponent = () => {
         style={{ backgroundImage: "url('/images/home/BackgroundImage.png')" }}
       />
 
-      <div className="hidden lg:block absolute inset-0 bg-purpleDarkBackground/60 backdrop-brightness-75" />
+      <div className="hidden lg:block absolute inset-0 bg-purpleDarkBackground/80 backdrop-brightness-55" />
 
       <div className="relative section-container flex flex-col justify-center items-center gap-4.5 text-center px-5">
         <h1
           className={`
-            text-white font-inter font-bold text-3xl lg:text-4xl
+            text-white font-inter font-bold text-3xl lg:text-[48px]
             transition-all duration-700 ease-out
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}

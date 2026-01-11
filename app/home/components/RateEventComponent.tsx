@@ -35,7 +35,7 @@ const RateEventComponent = () => {
         `}
       >
         <div className="order-1 lg:order-2 w-full lg:w-87.5 xl:w-100.5 flex flex-col gap-4 text-center lg:text-left">
-          <h1 className="font-inter text-2xl xs:text-2xl  lg:text-4xl text-textBlack font-bold text-start">
+          <h1 className="font-inter text-2xl xs:text-2xl  lg:text-[48px] text-textBlack font-bold text-start">
             Califica tu último evento
           </h1>
 
@@ -46,29 +46,41 @@ const RateEventComponent = () => {
           </p>
         </div>
 
-        <div className="order-2 lg:order-1 flex flex-row items-center gap-8 lg:gap-12.5">
+        <div className="order-2 lg:order-1 flex flex-row items-center gap-4 lg:gap-12.5">
           <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
-            <Image
-              src="/images/home/RateEvent1.png"
-              width={250}
-              height={500}
-              quality={90}
-              sizes="(max-width: 768px) 250px, (max-width: 1200px) 300px, 400px"
-              alt="rate-event-1"
-              className="mx-auto"
-            />
+            <div
+              className="
+        relative
+        w-41.25 h-90
+     sm:w-55 sm:h-107.5
+       lg:w-76.75 lg:h-166.75
+      "
+            >
+              <Image
+                src="/images/home/RateEvent1.png"
+                fill
+                quality={90}
+                alt="rate-event-1"
+              />
+            </div>
           </div>
 
-          <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)]  rounded-2xl overflow-hidden">
-            <Image
-              src="/images/home/RateEvent2.png"
-              width={250}
-              height={500}
-              quality={90}
-              sizes="(max-width: 768px) 250px, (max-width: 1200px) 300px, 400px"
-              alt="rate-event-2"
-              className="mx-auto"
-            />
+          <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
+            <div
+              className="
+        relative
+        w-41.25 h-90
+        sm:w-55 sm:h-107.5
+        lg:w-76.75 lg:h-166.75
+      "
+            >
+              <Image
+                src="/images/home/RateEvent2.png"
+                fill
+                quality={90}
+                alt="rate-event-2"
+              />
+            </div>
           </div>
         </div>
       </div>

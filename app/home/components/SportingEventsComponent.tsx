@@ -27,7 +27,7 @@ const SportingEventsComponent = () => {
         <div
           className="
             font-bebas w-full bg-[#1F2399] text-white h-30
-            px-6 py-6 flex flex-col
+            px-3 py-6 flex flex-col
             items-center justify-center gap-2
             xs:text-xl md:text-2xl shadow-lg text-center
           "
@@ -45,14 +45,14 @@ const SportingEventsComponent = () => {
           section-container flex flex-col lg:flex-row py-12 
           flex-1
           items-center lg:justify-center gap-6.75 lg:gap-30
-          transition-all duration-700 ease-out xs:mt-6 md:mt-5 px-6 md:px-12 lg:px-20 max-w-7xl
+          transition-all duration-700 ease-out xs:mt-6 md:mt-5 px-3 md:px-12 lg:px-20 max-w-7xl
           ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }
         `}
       >
-        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-90 flex flex-col gap-4 text-start lg:text-left">
-          <h1 className="font-inter text-2xl xs:text-2xl lg:text-4xl text-textBlack font-bold">
+        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-126 flex flex-col gap-4 text-start lg:text-left">
+          <h1 className="font-inter text-2xl xs:text-2xl lg:text-[48px] text-textBlack font-bold">
             Explora los eventos deportivos cerca
           </h1>
 
@@ -61,28 +61,43 @@ const SportingEventsComponent = () => {
             por deporte, día o nivel de juego, y únete con un solo clic.
           </p>
         </div>
-
-        <div className="order-2 lg:order-1 flex gap-8 lg:gap-12.5">
+        <div className="order-2 lg:order-1 flex gap-4 lg:gap-12.5">
           <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
-            <Image
-              src="/images/home/Event1.png"
-              width={250}
-              height={500}
-              quality={90}
-              sizes="(max-width: 768px) 250px, (max-width: 1200px) 300px, 400px"
-              alt="event-1"
-            />
+            <div
+              className="
+       w-41.25 h-90
+        sm:w-50 sm:h-107.5
+       lg:w-76.75 lg:h-166.75
+        relative
+      "
+            >
+              <Image
+                src="/images/home/Event1.png"
+                alt="event-1"
+                fill
+                quality={90}
+                className="object-contain"
+              />
+            </div>
           </div>
 
           <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
-            <Image
-              src="/images/home/Event2.png"
-              width={250}
-              height={500}
-              quality={90}
-              sizes="(max-width: 768px) 250px, (max-width: 1200px) 300px, 400px"
-              alt="event-2"
-            />
+            <div
+              className="
+       w-41.25 h-90
+        sm:w-55 sm:h-107.5
+       lg:w-76.75 lg:h-166.75
+        relative
+      "
+            >
+              <Image
+                src="/images/home/Event2.png"
+                alt="event-2"
+                fill
+                quality={90}
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -38,7 +38,7 @@ const ContactComponent = () => {
       ref={sectionRef}
       id="contact"
       className={`
-        section bg-[#F8F8FF] py-12 md:py-20 lg:py-24lg:min-h-[calc(100vh-72px)] lg:snap-center
+        section bg-[#F8F8FF] py-12 md:py-20 lg:py-24 lg:min-h-[calc(100vh-72px)] flex justify-center items-center lg:snap-center
     lg:scroll-mt-4.5 
       
       
@@ -73,7 +73,7 @@ const ContactComponent = () => {
               <>
                 <h2
                   className={`
-    font-inter text-2xl text-center lg:text-left lg:text-4xl
+    font-inter text-2xl text-center lg:text-left lg:text-[48px]
     font-extrabold text-textBlack mb-4
     transition-all duration-700 ease-out
     ${isVisible ? "opacity-100 translate-y-0 " : "opacity-0 translate-y-6 "}
