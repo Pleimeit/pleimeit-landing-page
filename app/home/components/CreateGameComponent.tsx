@@ -25,8 +25,7 @@ const CreateGameComponent = () => {
        bg-white
        py-12 md:py-20 lg:py-24
   lg:snap-center
-    lg:min-h-[calc(100vh-72px)]
-    lg:scroll-mt-18
+    lg:min-h-screen
     lg:flex
     lg:items-center
   
@@ -46,15 +45,15 @@ const CreateGameComponent = () => {
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
       `}
         >
-          <div className="order-1 w-full lg:w-105 lg:shrink-0 flex flex-col gap-4 lg:gap-6 text-left z-20">
+          <div className="order-1 w-full lg:w-105 lg:shrink-0 flex flex-col gap-4 lg:gap-6 text-center lg:text-left z-20">
             <h1 className="font-inter text-2xl lg:text-[48px] font-bold text-textBlack lg:w-[288px] xl:w-95.25">
               Crea tu propio encuentro deportivo
             </h1>
 
             <p className="text-textBlack font-inter text-[16px] lg:text-[18px] lg:w-[288px] xl:w-89.25">
-              Organiza partidos o entrenamientos con facilidad. Define el lugar,
-              fecha y tipo de juego; invita a tus amigos o deja el evento
-              abierto a nuevos jugadores.
+              Organiza partidos o entrenamientos en segundos. Define lugar,
+              fecha y modalidad; crea eventos privados para tus amigos o abre la
+              convocatoria para conocer a nuevos jugadores.
             </p>
           </div>
 

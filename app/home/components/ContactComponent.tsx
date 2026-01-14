@@ -38,8 +38,8 @@ const ContactComponent = () => {
       ref={sectionRef}
       id="contact"
       className={`
-        section bg-[#F8F8FF] py-12 md:py-20 lg:py-24 lg:min-h-[calc(100vh-72px)] flex justify-center items-center lg:snap-center
-    lg:scroll-mt-4.5 
+        section bg-[#F8F8FF] py-12 md:py-20 lg:py-24 lg:min-h-screen flex justify-center items-center lg:snap-center
+    
       
       
       `}
@@ -79,13 +79,14 @@ const ContactComponent = () => {
     ${isVisible ? "opacity-100 translate-y-0 " : "opacity-0 translate-y-6 "}
   `}
                 >
-                  ¿Tienes dudas?
+                  ¿Podemos ayudarte en algo?
                 </h2>
-                <p className="text-textBlack mb-8 leading-relaxed font-inter text-[16px] text-justify lg:text-left lg:text-[20px]">
-                  Cuéntanos qué tienes en mente. Nos encantará escucharte y ver
-                  cómo podemos ayudarte a hacer crecer tu comunidad deportiva.
+                <p className="text-textBlack mb-8 leading-relaxed font-inter text-[16px] text-center lg:text-left lg:text-[20px]">
+                  Desde preguntas técnicas hasta nuevas ideas para la app;
+                  estamos aquí para escucharte.
                   <br />
-                  Completa el formulario y te responderemos pronto.
+                  Completa el formulario y nuestro equipo se pondrá en contacto
+                  contigo muy pronto.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">

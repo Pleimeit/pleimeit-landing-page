@@ -26,8 +26,8 @@ const SportsCommunitiesComponent = () => {
     <section
       className="
         bg-white flex items-center py-12 md:py-20 lg:py-24
-       lg:min-h-[calc(100vh-72px)]
-        lg:snap-center lg:scroll-mt-18 lg:p-0
+       lg:min-h-screen
+        lg:snap-center  lg:p-0
       "
     >
       <div className="section-container max-w-360 mx-auto w-full px-6 md:px-12 lg:px-20">
@@ -49,14 +49,15 @@ const SportsCommunitiesComponent = () => {
             }
           `}
         >
-          <div className="order-1 w-full lg:w-105 lg:shrink-0 flex flex-col gap-4 lg:gap-6 text-left z-20 mb-4 lg:mb-0">
+          <div className="order-1 w-full lg:w-105 lg:shrink-0 flex flex-col gap-4 lg:gap-6 text-center lg:text-left z-20 mb-4 lg:mb-0">
             <h1 className="font-inter text-2xl lg:text-[48px] font-bold text-textBlack lg:w-71 xl:w-96">
               Participa en comunidades deportivas
             </h1>
 
             <p className="text-textBlack font-inter text-[16px] lg:text-[18px] lg:w-71 xl:w-96">
-              Conecta con jugadores de tu mismo deporte, comparte tips, organiza
-              nuevos partidos y mantente al día con lo que pasa en tu comunidad.
+              Conecta con jugadores de tu mismo deporte, comparte consejos,
+              solicita recomendaciones, organiza nuevos eventos y mantente al
+              día con lo que pasa en tu comunidad.
             </p>
           </div>
 

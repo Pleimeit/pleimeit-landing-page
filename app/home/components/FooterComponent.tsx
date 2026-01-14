@@ -79,7 +79,7 @@ const FooterComponent = () => {
                 lg:text-left
               "
             >
-              <p>© 2025 Pleimeit. Todos los derechos reservados.</p>
+              <p>© 2026 Pleimeit. Todos los derechos reservados.</p>
               <p>Diseñado con 💜 para deportistas y comunidades activas.</p>
             </div>
 

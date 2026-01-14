@@ -47,7 +47,7 @@ const HeaderComponent = () => {
   const navItemClasses = "cursor-pointer text-white transition hover:scale-110";
 
   return (
-    <nav className="fixed top-0 w-full bg-purpleBackground z-50">
+    <nav className=" w-full bg-purpleBackground ">
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 flex justify-between items-center h-18">
         <Link href="/" onClick={handleLinkClick}>
           <Image
@@ -59,7 +59,7 @@ const HeaderComponent = () => {
           />
         </Link>
 
-        <ul className="hidden lg:flex gap-17  font-raleway text-sm tracking-[0.25em] uppercase font-light">
+        <ul className="hidden lg:flex gap-17  font-raleway text-sm tracking-[0.25em] uppercase font-extrabold">
           <li className={navItemClasses}>
             <Link href="/#home" onClick={handleLinkClick}>
               HOME
@@ -104,7 +104,7 @@ const HeaderComponent = () => {
             </button>
           </div>
 
-          <ul className="flex flex-col gap-20 text-white tracking-[0.22em] font-raleway font-bold text-xl">
+          <ul className="flex flex-col gap-20 text-white tracking-[0.22em] font-raleway font-extrabold text-xl">
             <li>
               <Link href="/#home" onClick={handleLinkClick}>
                 HOME

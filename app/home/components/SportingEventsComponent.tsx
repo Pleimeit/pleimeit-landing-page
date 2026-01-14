@@ -21,9 +21,9 @@ const SportingEventsComponent = () => {
   return (
     <section
       ref={sectionRef}
-      className="  w-full bg-white snap-start py-12 md:py-20 lg:py-24 lg:min-h-[calc(100vh-72px)] scroll-mt-18 flex flex-col"
+      className="  w-full bg-white snap-start py-12 md:py-20 lg:py-24  lg:min-h-screen flex flex-col"
     >
-      <div className="lg:hidden w-full  mt-4">
+      {/* <div className="lg:hidden w-full  mt-4">
         <div
           className="
             font-bebas w-full bg-[#1F2399] text-white h-30
@@ -38,31 +38,34 @@ const SportingEventsComponent = () => {
             ⭐ 4.8/5 EN RESEÑAS REALES
           </span>
         </div>
-      </div>
+      </div> */}
 
       <div
         className={`
-          section-container flex flex-col lg:flex-row py-12 
+          section-container flex flex-col lg:flex-row 
           flex-1
-          items-center lg:justify-center gap-6.75 lg:gap-30
-          transition-all duration-700 ease-out xs:mt-6 md:mt-5 px-3 md:px-12 lg:px-20 max-w-7xl
+          items-center lg:justify-center gap-6.75  lg:gap-10  xl:gap-30
+          transition-all duration-700 ease-out px-6 md:px-12  lg:px-20 max-w-7xl
           ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }
         `}
       >
-        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-126 flex flex-col gap-4 text-start lg:text-left">
+        <div className="order-1 lg:order-2 w-full lg:w-87.5  xl:w-126 flex flex-col gap-4 text-center lg:text-left">
           <h1 className="font-inter text-2xl xs:text-2xl lg:text-[48px] text-textBlack font-bold">
-            Explora los eventos deportivos cerca
+            Explora eventos deportivos cerca de ti
           </h1>
 
           <p className="text-textBlack font-inter text-[16px] lg:text-[20px] max-w-xl mx-auto lg:mx-0">
             Descubre partidos, retos y actividades según tu ubicación. Filtra
-            por deporte, día o nivel de juego, y únete con un solo clic.
+            por deporte, fecha o nivel de juego y únete con un solo clic.
           </p>
         </div>
-        <div className="order-2 lg:order-1 flex gap-4 lg:gap-12.5">
-          <div className="shadow-[0_8px_30px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden">
+        <div className="order-2 lg:order-1 flex gap-2   lg:gap-9.5  xl:gap-12.5">
+          <div
+            className="shadow-[0_8px_0
+          0px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden"
+          >
             <div
               className="
        w-41.25 h-90
