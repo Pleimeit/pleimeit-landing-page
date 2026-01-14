@@ -13,11 +13,11 @@ const AboutUsComponent = () => {
       ref={ref}
       id="about"
       className="
-        relative section     lg:min-h-[calc(100vh-72px)]
+        relative section     lg:min-h-screen
         flex justify-center items-center
         overflow-hidden
         bg-purpleBackground lg:bg-transparent
-        lg:snap-center lg:scroll-mt-18
+        lg:snap-center 
       "
     >
       <div
@@ -35,22 +35,23 @@ const AboutUsComponent = () => {
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          Somos Pleimeit, una comunidad que une el <br />
-          deporte con la tecnología.
+          Pleimeit es parte de Star App Peru S.A.C., expertos en soluciones web{" "}
+          <br />y móviles con un propósito social.
         </h1>
 
         <p
           className={`
-            text-white font-inter max-w-4xl leading-relaxed hyphens-auto
-            transition-all duration-700 delay-150 ease-out
-            ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
-          `}
+    text-white font-inter max-w-4xl leading-relaxed hyphens-auto
+    transition-all duration-700 delay-150 ease-out
+    ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+  `}
         >
-          Nacimos con una idea simple: facilitar que más personas puedan jugar,
-          conectar y disfrutar del deporte sin complicaciones. Nuestro equipo —
-          Javier, Harold y Joshep — combina experiencia en tecnología, diseño y
-          marketing digital para crear una app que fomente comunidades
-          deportivas reales, inclusivas y activas.
+          Nacimos con una idea simple, hacer a la gente más feliz a través del
+          deporte y la creación de comunidades reales. Creemos que la tecnología
+          debe servir para unir a las personas fuera de las pantallas y chats.
+          <br />
+          “Porque los amigos no se encuentran en una pantalla, sino donde ocurre
+          el juego”.
         </p>
 
         <div

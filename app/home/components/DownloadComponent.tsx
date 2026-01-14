@@ -27,9 +27,9 @@ const DownloadComponent = () => {
       ref={sectionRef}
       className={`
         relative bg-purpleBackground text-white overflow-hidden
-       py-12 md:py-20 lg:py-24  lg:min-h-[calc(100vh-72px)] flex items-center
+       py-12 md:py-20 lg:py-24  lg:min-h-screen flex items-center
         transition-all duration-700 ease-out     lg:snap-center
-    lg:scroll-mt-4.5
+   
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}
       `}
     >
@@ -50,8 +50,10 @@ const DownloadComponent = () => {
             </h1>
 
             <p className="text-lg lg:text-xl text-white/90 max-w-xl mb-8 leading-relaxed">
-              Organiza tus partidos, crea eventos y conoce a más jugadores que
-              comparten tu pasión. Gratis, sin límites y con la mejor energía 💪
+              Crea eventos, participa y conoce a personas que comparten tu
+              pasión.No importa si eres principiante o experto. En Pleimeit
+              puedes filtrar los eventos por nivel de juego para que siempre te
+              sientas cómodo y disfrutes del partido al máximo.
             </p>
 
             <div className="lg:hidden mb-2 lg:mb-8 w-full flex justify-center">
@@ -75,7 +77,7 @@ const DownloadComponent = () => {
                   width={200}
                   height={80}
                   quality={90}
-                  className="h-12 w-34 xl:h-20 xl:w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-12 w-34 lg:h-13 lg:w-44   cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
 
@@ -91,7 +93,7 @@ const DownloadComponent = () => {
                   width={200}
                   height={80}
                   quality={90}
-                  className="h-12 w-34 xl:h-20 xl:w-auto cursor-pointer transition-transform hover:scale-105"
+                  className="h-12 w-34 lg:h-13 lg:w-44   cursor-pointer transition-transform hover:scale-105"
                 />
               </Link>
             </div>
