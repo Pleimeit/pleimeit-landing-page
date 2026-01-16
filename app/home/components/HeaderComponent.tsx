@@ -86,7 +86,7 @@ const HeaderComponent = () => {
       </div>
 
       {isMenuOpenState && (
-        <div className="fixed top-0 left-0 w-full h-full bg-purpleBackground px-6 md:px-8 py-8 z-50 flex flex-col animate-slide-down">
+        <div className="fixed top-0 left-0 w-full h-full bg-purpleBackground px-6 md:px-8 py-8 z-50 flex flex-col animate-menu-smooth">
           <div className="flex justify-between items-center mb-12">
             <Link href="/" onClick={toggleMenu}>
               <Image 
