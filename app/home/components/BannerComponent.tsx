@@ -4,18 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 
 const slides = [
-  {
-    image: "/images/home/Running.png",
-    title: "Haz nuevos amigos practicando tu deporte favorito",
-    description:
-      "Pleimeit es la app social que conecta personas a través del deporte. Organiza tus propios eventos o únete a los que ya existen.Conoce gente nueva y crea amistades, ¡usar Pleimeit es súper fácil!",
-  },
+
 
   {
-    image: "/images/home/Athletes.png",
-    title: "JUEGA, CONOCE Y FORMA TU COMUNIDAD DEPORTIVA",
+    image: "/images/home/Running.png",
+    title: "¿ De viaje y sin conocer a nadie ?",
     description:
-      "PLEIMEIT UNE A JUGADORES, EQUIPOS Y ORGANIZADORES PARA CREAR PARTIDAS REALES CERCA DE TI. ENCUENTRA TU DEPORTE, CONFIRMA TU CUPO Y COMPARTE LA EXPERIENCIA CON TU COMUNIDAD.",
+      "Usa Pleimeit en otros países de Latinoamérica, y conecta con otras personas , practica el deporte que te gusta, y agranda tu círculo y conexiones sociales en el mundo.",
+  },
+    {
+    
+    image: "/images/home/Athletes.png",
+    title: "Haz nuevos amigos practicando tu deporte favorito",
+    description:
+      "Pleimeit es la app social que conecta personas a través del deporte. Organiza tus propios eventos o únete a los que ya existen. Conoce gente nueva y crea amistades, ¡usar Pleimeit es súper fácil!",
   },
 ];
 
@@ -104,7 +106,7 @@ const BannerComponent = () => {
             </Link>
           </div>
 
-          <p className="font-bebas text-sm lg:text-xl xl:text-2xl tracking-[0.25em] uppercase text-center lg:text-left">
+          <p className="font-bebas text-sm lg:text-xl xl:text-2xl tracking-[0.25em] uppercase text-center lg:text-left whitespace-nowrap">
             DESCARGA LA APP - GRATIS PARA EMPEZAR
           </p>
         </div>
