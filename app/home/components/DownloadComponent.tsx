@@ -105,16 +105,15 @@ const DownloadComponent = () => {
       </div>
 
 
-     <div
-  className={`
-    hidden lg:block
-
-   absolute right-[-250px] bottom-0 w-full lg:w-[60%] h-full overflow-y-hidden
-    pointer-events-none
-    transition-all duration-1000 delay-200
-    ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}
-  `}
->
+      <div
+        className={`
+          hidden lg:block
+   absolute right-[-250px] bottom-0 w-full lg:w-[78%] 2xl:w-[60%] h-full overflow-y-hidden
+          pointer-events-none
+          transition-all duration-1000 delay-200
+          ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}
+        `}
+      >
         <Image
           src="/images/home/Athletes-footer.png"
           alt="Atletas Pleimeit"

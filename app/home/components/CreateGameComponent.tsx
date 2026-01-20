@@ -75,7 +75,7 @@ const CreateGameComponent = () => {
           </div>
 
           <div className="hidden lg:flex absolute bottom-0 lg:right-4 xl:right-14 2xl:right-18 items-end lg:gap-4 xl:gap-6 z-10">
-            <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50   xl:max-w-70 h-100 lg:h-91 xl:h-120 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
+            <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50   xl:max-w-70 h-100 lg:h-91 xl:h-112 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
               <img
                 src="/images/home/Step1.png"
                 alt="step-1"
@@ -83,7 +83,7 @@ const CreateGameComponent = () => {
               />
             </div>
 
-            <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50 xl:max-w-70 h-100 lg:h-91 xl:h-120 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
+            <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50 xl:max-w-70 h-100 lg:h-91 xl:h-112 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
               <img
                 src="/images/home/CurrentEvent.png"
                 alt="current-event"

@@ -50,7 +50,7 @@ const BannerComponent = () => {
  
         <div className="flex flex-col justify-center items-center lg:items-start xl:items-start  w-full lg:flex-1">
           <div className="max-w-xl mb-6 lg:mb-8">
-            <h1 className="font-bebas text-3xl xs:text-4xl lg:text-5xl xl:text-6xl mb-3 lg:mb-4 text-center lg:text-left">
+            <h1 className="font-bebas text-3xl xs:text-4xl lg:text-4xl xl:text-6xl mb-3 lg:mb-4 text-center lg:text-left ">
               {title}
             </h1>
 
