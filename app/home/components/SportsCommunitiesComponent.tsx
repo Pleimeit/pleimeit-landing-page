@@ -22,26 +22,26 @@ const SportsCommunitiesComponent = () => {
   return (
     <section
       className="
-        bg-white flex items-center py-12 md:py-20 lg:py-24
+        bg-white flex items-center py-12 md:py-20 lg:py-24 
         lg:min-h-[calc(100vh-72px)]
         lg:snap-center lg:scroll-mt-18
       "
     >
-      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20">
+      <div className=" section-container max-w-360 mx-auto w-full px-6 md:px-12 lg:px-10 xl:px-20">
         <div
           ref={contentRef}
           className={`
-            relative flex flex-col lg:flex-row
+            relative flex flex-col lg:flex-row 
             items-center justify-between
             bg-lila rounded-[40px]
             
-            /* Ajustes de Padding y Altura para 1024px */
+              
             pt-10 px-6 pb-0
             lg:pt-16 lg:pb-16 lg:px-12 xl:px-16 2xl:px-20
             
-            /* ELIMINAMOS aspect-ratio en lg y lo ponemos solo en xl para evitar que se aplaste */
+
             xl:aspect-[1712/704] 
-            lg:min-h-[500px] /* Garantiza altura mínima en 1024px sin romper el texto */
+         
             
             overflow-hidden 
             transition-all duration-700 ease-out
@@ -69,8 +69,8 @@ const SportsCommunitiesComponent = () => {
           </div>
 
         
-          <div className="hidden lg:flex absolute bottom-0 right-6 xl:right-14 2xl:right-20 items-end gap-4 xl:gap-6 z-10 h-[80%] xl:h-[85%]">
-                  <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50   xl:max-w-70 h-100 lg:h-109 xl:h-112 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
+          <div className="hidden lg:flex absolute bottom-0 lg:right-4 xl:right-14 2xl:right-18 items-end lg:gap-4 xl:gap-6 z-10">
+                  <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50   xl:max-w-70 h-100 lg:h-98 xl:h-105  2xl:h-115  overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
               <img
                 src="/images/home/SportCommunities1.png"
                 alt="community-1"
@@ -78,7 +78,7 @@ const SportsCommunitiesComponent = () => {
               />
             </div>
 
-        <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50 xl:max-w-70 h-100 lg:h-109 xl:h-112 overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
+        <div className="w-auto min-w-40 lg:max-w-60 xl:min-w-50 xl:max-w-70 h-100 lg:h-98 xl:h-105  2xl:h-115  overflow-hidden rounded-t-3xl shadow-[0_8px_30px_rgba(174,172,243,0.4)] bg-white relative">
               <img
                 src="/images/home/SportCommunities2.png"
                 alt="community-2"
