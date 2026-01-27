@@ -45,14 +45,14 @@ const HeaderComponent = () => {
 
   return (
     <nav className="w-full bg-purpleBackground">
-      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20 flex justify-between items-center h-18">
+      <div className="max-w-7xl mx-auto w-full px-6 md:px-12 lg:px-20  pt-[18px] flex justify-between items-center h-18">
         <Link href="/" onClick={handleLinkClick}>
           <Image
             src="/images/home/PleimitLogo.png"
             alt="logo"
             height={100}
             width={170}
-            className="w-28 xl:w-30"
+            className="w-30 lg:w-45"
           />
         </Link>
 
