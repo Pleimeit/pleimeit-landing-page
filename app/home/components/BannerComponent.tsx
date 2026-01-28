@@ -6,18 +6,20 @@ import Link from "next/link";
 const slides = [
 
 
+/*
   {
     image: "/images/home/Running.png",
     title: "¿ De viaje y sin conocer a nadie ?",
     description:
       "Usa Pleimeit en otros países de Latinoamérica, y conecta con otras personas , practica el deporte que te gusta, y agranda tu círculo y conexiones sociales en el mundo.",
   },
+*/
     {
     
     image: "/images/home/Athletes.png",
-    title: "Haz nuevos amigos practicando tu deporte favorito",
+    title: "Conecta con nuevas personas a través del deporte",
     description:
-      "Pleimeit es la app social que conecta personas a través del deporte. Organiza tus propios eventos o únete a los que ya existen. Conoce gente nueva y crea amistades, ¡usar Pleimeit es súper fácil!",
+      "Pleimeit es la app social deportiva que conecta personas a través del deporte. Crea  tus propios eventos o únete a uno de ellos. Usar Pleimeit es súper fácil.",
   },
 ];
 
@@ -25,14 +27,17 @@ const BannerComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    if (slides.length <= 1) return; 
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 4500);
 
     return () => clearInterval(interval);
   }, []);
 
-  const { image, title, description } = slides[currentIndex];
+  const currentSlide = slides[currentIndex] || slides[0];
+  const { image, title, description } = currentSlide;
 
   return (
     <section

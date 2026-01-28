@@ -36,8 +36,7 @@ const AboutUsComponent = () => {
             ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
           `}
         >
-          Pleimeit es parte de Star App Peru S.A.C., expertos en soluciones web{" "}
-          <br />y móviles con un propósito social.
+        Pleimeit es parte de Star App Peru S.A.C. expertos en soluciones digitales.
         </h1>
 
         <p
@@ -48,12 +47,11 @@ const AboutUsComponent = () => {
     ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
   `}
         >
-          Nacimos con una idea simple, hacer a la gente más feliz a través del
-          deporte y la creación de comunidades reales. Creemos que la tecnología
-          debe servir para unir a las personas fuera de las pantallas y chats.
+       Nacimos con una idea simple, hacer a la gente más feliz a través del deporte y la creación
+        de comunidades reales. Creemos que la tecnología debe servir para unir a las personas 
+        fuera de las pantallas y chats.
           <br />
-          "Porque los amigos no se encuentran en una pantalla, sino donde ocurre
-          el juego".
+        "Porque los amigos no se encuentran en una pantalla, sino donde ocurre el juego".
         </p>
 
         <div
