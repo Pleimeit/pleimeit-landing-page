@@ -50,7 +50,7 @@ const AboutUsComponent = () => {
        Nacimos con una idea simple, hacer a la gente más feliz a través del deporte y la creación
         de comunidades reales. Creemos que la tecnología debe servir para unir a las personas 
         fuera de las pantallas y chats.
-          <br /> <br />
+          <br /> <br /> 
         "Porque los amigos no se encuentran en una pantalla, sino donde ocurre el juego".
         </p>
 
