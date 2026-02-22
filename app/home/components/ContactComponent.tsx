@@ -4,16 +4,61 @@ import ButtonComponent from "@/app/components/ButtonComponent";
 import Image from "next/image";
 
 import CountrySelect from "@/app/components/CountrySelect";
+import { sendContactEmail } from "@/app/actions/contact";
 
 
 const ContactComponent = () => {
   const [isSubmittedState, setIsSubmittedState] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Form states
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    reason: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmittedState(true);
+    setIsLoading(true);
+    setErrorMessage("");
+    
+    console.log("⬆️ Enviando datos del formulario:", formData);
+
+    try {
+      const response = await sendContactEmail(formData);
+
+      if (response.success) {
+        setIsSubmittedState(true);
+        // Reset form data after successful submission
+        setFormData({
+          fullName: "",
+          email: "",
+          reason: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setErrorMessage(response.error as string || "Hubo un error al enviar el mensaje.");
+      }
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      setErrorMessage("No se pudo conectar con el servidor.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -89,6 +134,11 @@ const ContactComponent = () => {
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
+                  {errorMessage && (
+                    <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm border border-red-200">
+                      {errorMessage}
+                    </div>
+                  )}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="font-inter text-sm font-medium text-textBlack">
@@ -96,6 +146,9 @@ const ContactComponent = () => {
                       </label>
                       <input
                         type="text"
+                        name="fullName"
+                        value={formData.fullName}
+                        onChange={handleChange}
                         required
                         placeholder="Ejemplo: Joseph Montoya"
                         className="mt-1 w-full text-textGraySecundary bg-white rounded-lg border border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
@@ -108,6 +161,9 @@ const ContactComponent = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         required
                         placeholder="Ejemplo: joseph@email.com"
                         className="mt-1 w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
@@ -122,6 +178,9 @@ const ContactComponent = () => {
                       </label>
                       <input
                         type="text"
+                        name="reason"
+                        value={formData.reason}
+                        onChange={handleChange}
                         required
                         placeholder="Ejemplo: Soporte técnico"
                         className="mt-1 w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
@@ -136,6 +195,9 @@ const ContactComponent = () => {
                         <CountrySelect />
                         <input
                           type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
                           required
                           placeholder="Número de teléfono"
                           className="w-full rounded-lg border text-textGraySecundary bg-white  border-gray-200 shadow-sm px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-purpleBackground"
@@ -149,13 +211,27 @@ const ContactComponent = () => {
                       Mensaje
                     </label>
                     <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       required
                       placeholder="Cuéntanos brevemente cómo podemos ayudarte."
                       className="mt-1 w-full rounded-lg border border-gray-200 bg-white  text-textGraySecundary shadow-sm px-4 py-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-purpleBackground"
                     />
                   </div>
 
-                  <ButtonComponent text="Enviar mensaje" type="submit" />
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className={` lg:h-12 lg:w-60 w-full h-12 px-8 py-3 rounded-full font-semibold text-white transition-all 
+                      ${
+                        isLoading
+                          ? "bg-purpleBackground/70 cursor-not-allowed"
+                          : "bg-purpleBackground hover:bg-purpleBackground/90"
+                      }`}
+                  >
+                    {isLoading ? "Enviando..." : "Enviar mensaje"}
+                  </button>
                 </form>
               </>
             )}

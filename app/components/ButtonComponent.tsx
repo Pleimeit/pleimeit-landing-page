@@ -20,7 +20,7 @@ const ButtonComponent: React.FC<CustomButtonProps> = ({
 }) => {
   if (link) {
     return (
-      <Link href={link} target="_blank">
+      <Link href={link} >
         <div
           className={`
             shadow-bottom

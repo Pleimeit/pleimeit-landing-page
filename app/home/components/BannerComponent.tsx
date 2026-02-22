@@ -77,7 +77,7 @@ const BannerComponent = () => {
           </div>
 
  
-          <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 lg:mb-8">
+          <div className="flex items-center justify-center gap-4 mb-6 w-full lg:mb-8">
             <Link
               href="#"
               target="_blank"
@@ -94,7 +94,7 @@ const BannerComponent = () => {
               />
             </Link>
 
-            <Link
+            {/* <Link
               href="#"
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +108,7 @@ const BannerComponent = () => {
                 quality={90}
                 className="h-12 w-auto lg:h-13 cursor-pointer transition-transform hover:scale-105"
               />
-            </Link>
+            </Link> */}
           </div>
 
           <p className="font-bebas text-sm lg:text-xl xl:text-2xl tracking-[0.25em] uppercase text-center lg:text-left whitespace-nowrap">

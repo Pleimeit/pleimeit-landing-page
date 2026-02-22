@@ -64,7 +64,7 @@ const DownloadComponent = () => {
               />
             </div>
 
-            <div className="flex flex-row justify-center lg:justify-start items-center gap-4">
+            <div className="flex flex-row justify-center w-full items-center gap-4">
               <Link
                 href="#"
                 target="_blank"
@@ -81,7 +81,7 @@ const DownloadComponent = () => {
                 />
               </Link>
 
-              <Link
+              {/* <Link
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -95,7 +95,7 @@ const DownloadComponent = () => {
                   quality={90}
                   className="h-12 w-auto lg:h-13 cursor-pointer transition-transform hover:scale-105"
                 />
-              </Link>
+              </Link> */}
             </div>
           </div>
 

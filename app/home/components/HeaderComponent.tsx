@@ -143,7 +143,7 @@ const HeaderComponent = () => {
                 />
               </Link>
 
-              <Link
+              {/* <Link
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -156,7 +156,7 @@ const HeaderComponent = () => {
                   width={150}
                   className="h-13 w-auto cursor-pointer transition-transform hover:scale-105"
                 />
-              </Link>
+              </Link> */}
             </div>
 
             <p className="text-white text-[13px] text-center font-bebas tracking-[0.25em] uppercase">

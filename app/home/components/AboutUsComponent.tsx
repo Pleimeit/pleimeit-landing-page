@@ -63,7 +63,7 @@ const AboutUsComponent = () => {
         >
           <ButtonComponent
             text="Contáctanos"
-            link="/"
+            link="/#contact"
             bgColor="bg-white"
             textColor="text-purpleBackground"
             hoverBgColor="hover:bg-white/90"
