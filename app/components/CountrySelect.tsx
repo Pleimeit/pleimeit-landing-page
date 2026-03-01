@@ -8,7 +8,12 @@ interface Country {
   flag: string;
 }
 
-const CountrySelect = () => {
+interface CountrySelectProps {
+  value?: string;
+  onChange?: (dialCode: string) => void;
+}
+
+const CountrySelect = ({ value, onChange }: CountrySelectProps) => {
   const [open, setOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,10 +39,17 @@ const CountrySelect = () => {
     }
   }, [open]);
 
+  useEffect(() => {
+    if (value === "" && selectedCountry) {
+      setSelectedCountry(null);
+    }
+  }, [value]);
+
   const handleSelect = (country: Country) => {
     setSelectedCountry(country);
     setOpen(false);
     setSearchTerm("");
+    onChange?.(country.dial_code);
   };
 
   const filteredCountries = countries.filter(

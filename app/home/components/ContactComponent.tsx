@@ -19,6 +19,7 @@ const ContactComponent = () => {
     fullName: "",
     email: "",
     reason: "",
+    countryCode: "",
     phone: "",
     message: "",
   });
@@ -35,10 +36,22 @@ const ContactComponent = () => {
     setIsLoading(true);
     setErrorMessage("");
     
-    console.log("⬆️ Enviando datos del formulario:", formData);
+    if (!formData.countryCode) {
+      setErrorMessage("Por favor selecciona el código de país.");
+      setIsLoading(false);
+      return;
+    }
+
+    const dataToSend = {
+      fullName: formData.fullName,
+      email: formData.email,
+      reason: formData.reason,
+      phone: `${formData.countryCode} ${formData.phone}`,
+      message: formData.message,
+    };
 
     try {
-      const response = await sendContactEmail(formData);
+      const response = await sendContactEmail(dataToSend);
 
       if (response.success) {
         setIsSubmittedState(true);
@@ -47,6 +60,7 @@ const ContactComponent = () => {
           fullName: "",
           email: "",
           reason: "",
+          countryCode: "",
           phone: "",
           message: "",
         });
@@ -192,7 +206,12 @@ const ContactComponent = () => {
                         Número
                       </label>
                       <div className="mt-1 flex gap-2">
-                        <CountrySelect />
+                        <CountrySelect
+                          value={formData.countryCode}
+                          onChange={(dialCode) =>
+                            setFormData((prev) => ({ ...prev, countryCode: dialCode }))
+                          }
+                        />
                         <input
                           type="tel"
                           name="phone"
