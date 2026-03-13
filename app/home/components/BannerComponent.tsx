@@ -79,7 +79,7 @@ const BannerComponent = () => {
  
           <div className="flex items-center justify-center gap-4 mb-6 w-full lg:mb-8">
             <Link
-              href="#"
+              href="https://apps.apple.com/pe/app/pleimeit/id6758894872"
               target="_blank"
               rel="noopener noreferrer"
               className="block"

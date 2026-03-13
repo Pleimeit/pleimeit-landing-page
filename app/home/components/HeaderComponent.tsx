@@ -129,7 +129,7 @@ const HeaderComponent = () => {
           <div className="mt-auto">
             <div className="flex gap-4 mb-6 items-center justify-center">
               <Link
-                href="#"
+                href="https://apps.apple.com/pe/app/pleimeit/id6758894872"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"

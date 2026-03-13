@@ -66,7 +66,7 @@ const DownloadComponent = () => {
 
             <div className="flex flex-row justify-center w-full items-center gap-4">
               <Link
-                href="#"
+                href="https://apps.apple.com/pe/app/pleimeit/id6758894872"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
