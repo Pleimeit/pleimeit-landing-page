@@ -81,8 +81,8 @@ const DownloadComponent = () => {
                 />
               </Link>
 
-              {/* <Link
-                href="#"
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.pleimeit.app&hl=es"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
@@ -95,7 +95,7 @@ const DownloadComponent = () => {
                   quality={90}
                   className="h-12 w-auto lg:h-13 cursor-pointer transition-transform hover:scale-105"
                 />
-              </Link> */}
+              </Link>
             </div>
           </div>
 

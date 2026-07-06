@@ -94,8 +94,8 @@ const BannerComponent = () => {
               />
             </Link>
 
-            {/* <Link
-              href="#"
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.pleimeit.app&hl=es"
               target="_blank"
               rel="noopener noreferrer"
               className="block"
@@ -108,7 +108,7 @@ const BannerComponent = () => {
                 quality={90}
                 className="h-12 w-auto lg:h-13 cursor-pointer transition-transform hover:scale-105"
               />
-            </Link> */}
+            </Link>
           </div>
 
           <p className="font-bebas text-sm lg:text-xl xl:text-2xl tracking-[0.25em] uppercase text-center lg:text-left whitespace-nowrap">
